@@ -1,0 +1,1 @@
+alert dns $HOME_NET any -> any any (msg:”Kali/Offensive Security DNS Query Observed”; dns.query; nocase;content:”kali”; classtype:bn-custom; sid:30031; rev:1;)
