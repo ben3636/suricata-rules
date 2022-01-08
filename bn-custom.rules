@@ -1,1 +1,1 @@
-alert dns $HOME_NET any -> any any (msg:"Kali or Offensive Security DNS Query Observed"; dns.query; content:"kali.org"; nocase; classtype: bn-custom; sid: 300031; rev:1;)
+alert dns $HOME_NET any -> any any (msg:"Kali or Offensive Security DNS Query Observed"; dns.query; content:"kali.org"; nocase; classtype:bn_custom; sid:300031; rev:1;)
