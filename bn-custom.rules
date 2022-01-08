@@ -1,3 +1,3 @@
-alert dns $HOME_NET any -> any any (msg:"Kali DNS Query Observed"; dns.query; content:"kali"; nocase; classtype:bn_custom; sid:300031; rev:1;)
-alert dns $HOME_NET any -> any any (msg:"Pastebin DNS Query Observed"; dns.query; content:"pastebin"; nocase; classtype:bn_custom; sid:300032; rev:1;)
-alert dns $HOME_NET any -> any any (msg:"Exploit DNS Query Observed"; dns.query; content:"exploit"; nocase; classtype:bn_custom; sid:300033; rev:1;)
+alert dns $HOME_NET any -> any any (msg:"Kali DNS Query Observed"; dns.query; pcre:"/.*kali.*/"; nocase; classtype:bn_custom; sid:300031; rev:1;)
+alert dns $HOME_NET any -> any any (msg:"Pastebin DNS Query Observed"; dns.query; pcre:"/.*pastebin.*/"; nocase; classtype:bn_custom; sid:300032; rev:1;)
+alert dns $HOME_NET any -> any any (msg:"Exploit DNS Query Observed"; dns.query; pcre:"/.*exploit.*/"; nocase; classtype:bn_custom; sid:300033; rev:1;)
